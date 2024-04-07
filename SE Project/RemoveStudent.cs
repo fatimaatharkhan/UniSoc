@@ -13,12 +13,12 @@ namespace SE_Project
 {
     public partial class RemoveStudent : Form
     {
-        private string connectionString = "Data Source=G4CE-1080\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
+        private string connectionString = "Data Source=DESKTOP-DG0T52K\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
         private AdminMain adminMain;
 
         public RemoveStudent()
         {
-            InitializeComponent(); 
+            InitializeComponent();
             LoadSocietiesData();
         }
 
@@ -275,6 +275,11 @@ namespace SE_Project
                     DataGridView1.Columns[0].ReadOnly = true;
                 }
             }
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

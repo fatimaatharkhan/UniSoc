@@ -24,7 +24,7 @@ namespace SE_Project
 {
     public partial class LogIn : Form
     {
-        private string connectionString = "Data Source=G4CE-1080\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
+        private string connectionString = "Data Source=DESKTOP-DG0T52K\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
 
         public LogIn()
         {
@@ -91,6 +91,11 @@ namespace SE_Project
         }
 
         private void BackToMainBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
         {
 
         }

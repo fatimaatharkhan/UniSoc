@@ -13,7 +13,7 @@ namespace SE_Project
 {
     public partial class RemoveSociety : Form
     {
-        private string connectionString = "Data Source=G4CE-1080\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
+        private string connectionString = "Data Source=DESKTOP-DG0T52K\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
         private AdminMain adminMain;
 
         public RemoveSociety()
@@ -83,12 +83,6 @@ namespace SE_Project
                 MessageBox.Show("Error loading society data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
-
-
 
 
 
@@ -195,9 +189,5 @@ namespace SE_Project
             SocietyNameTxtbox.Text = "Enter Society name here!";
             SocietyNameTxtbox.ForeColor = Color.Gray;
         }
-
-
-
-
     }
 }

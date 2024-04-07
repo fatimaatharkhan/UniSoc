@@ -13,7 +13,7 @@ namespace SE_Project
 {
     public partial class AddSociety : Form
     {
-        private string connectionString = "Data Source=G4CE-1080\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
+        private string connectionString = "Data Source=DESKTOP-DG0T52K\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
         private AdminMain adminMain;
 
         public AddSociety()
@@ -80,6 +80,11 @@ namespace SE_Project
 
             adminMain.Show(); // Show the AdminMain form
             this.Hide(); // Hide the AddSociety form
+        }
+
+        private void AddSociety_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

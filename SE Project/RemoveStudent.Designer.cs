@@ -43,17 +43,18 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(183, 44);
+            label3.Location = new Point(209, 59);
             label3.Name = "label3";
-            label3.Size = new Size(429, 45);
+            label3.Size = new Size(549, 57);
             label3.TabIndex = 8;
             label3.Text = "Remove Student Page";
             // 
             // RemoveStudentBtn
             // 
-            RemoveStudentBtn.Location = new Point(680, 418);
+            RemoveStudentBtn.Location = new Point(777, 557);
+            RemoveStudentBtn.Margin = new Padding(3, 4, 3, 4);
             RemoveStudentBtn.Name = "RemoveStudentBtn";
-            RemoveStudentBtn.Size = new Size(108, 23);
+            RemoveStudentBtn.Size = new Size(123, 31);
             RemoveStudentBtn.TabIndex = 18;
             RemoveStudentBtn.Text = "Remove Student";
             RemoveStudentBtn.UseVisualStyleBackColor = true;
@@ -61,50 +62,56 @@
             // 
             // unTxtbox
             // 
-            unTxtbox.Location = new Point(302, 414);
+            unTxtbox.Location = new Point(345, 552);
+            unTxtbox.Margin = new Padding(3, 4, 3, 4);
             unTxtbox.Name = "unTxtbox";
-            unTxtbox.Size = new Size(178, 23);
+            unTxtbox.Size = new Size(203, 27);
             unTxtbox.TabIndex = 17;
             // 
             // SocietyNameTxtbox
             // 
-            SocietyNameTxtbox.Location = new Point(302, 363);
+            SocietyNameTxtbox.Location = new Point(345, 484);
+            SocietyNameTxtbox.Margin = new Padding(3, 4, 3, 4);
             SocietyNameTxtbox.Name = "SocietyNameTxtbox";
-            SocietyNameTxtbox.Size = new Size(178, 23);
+            SocietyNameTxtbox.Size = new Size(203, 27);
             SocietyNameTxtbox.TabIndex = 16;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(149, 418);
+            label2.Location = new Point(170, 557);
             label2.Name = "label2";
-            label2.Size = new Size(60, 15);
+            label2.Size = new Size(75, 20);
             label2.TabIndex = 15;
             label2.Text = "Username";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(150, 371);
+            label1.Location = new Point(171, 495);
             label1.Name = "label1";
-            label1.Size = new Size(80, 15);
+            label1.Size = new Size(101, 20);
             label1.TabIndex = 14;
             label1.Text = "Society Name";
             // 
             // DataGridView1
             // 
             DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridView1.Location = new Point(27, 92);
+            DataGridView1.Location = new Point(31, 123);
+            DataGridView1.Margin = new Padding(3, 4, 3, 4);
             DataGridView1.Name = "DataGridView1";
+            DataGridView1.RowHeadersWidth = 51;
             DataGridView1.RowTemplate.Height = 25;
-            DataGridView1.Size = new Size(740, 253);
+            DataGridView1.Size = new Size(846, 337);
             DataGridView1.TabIndex = 19;
+            DataGridView1.CellContentClick += DataGridView1_CellContentClick;
             // 
             // SearchBtn
             // 
-            SearchBtn.Location = new Point(680, 367);
+            SearchBtn.Location = new Point(777, 489);
+            SearchBtn.Margin = new Padding(3, 4, 3, 4);
             SearchBtn.Name = "SearchBtn";
-            SearchBtn.Size = new Size(75, 23);
+            SearchBtn.Size = new Size(86, 31);
             SearchBtn.TabIndex = 20;
             SearchBtn.Text = "Search!";
             SearchBtn.UseVisualStyleBackColor = true;
@@ -112,10 +119,10 @@
             // 
             // RemoveStudent
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(SearchBtn);
             Controls.Add(DataGridView1);
             Controls.Add(RemoveStudentBtn);
@@ -124,6 +131,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(label3);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "RemoveStudent";
             Text = "RemoveStudent";
             FormClosing += RemoveStudent_FormClosing;

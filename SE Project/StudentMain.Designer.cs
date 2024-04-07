@@ -35,21 +35,23 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(205, 43);
+            label3.Location = new Point(234, 57);
             label3.Name = "label3";
-            label3.Size = new Size(369, 45);
+            label3.Size = new Size(472, 57);
             label3.TabIndex = 8;
             label3.Text = "Student Main Page";
             // 
             // StudentMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(label3);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "StudentMain";
             Text = "StudentMain";
+            Load += StudentMain_Load;
             ResumeLayout(false);
             PerformLayout();
         }

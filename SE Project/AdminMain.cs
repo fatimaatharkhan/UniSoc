@@ -56,5 +56,10 @@ namespace SE_Project
             removeStudent.Show();
             this.Hide();
         }
+
+        private void AdminMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

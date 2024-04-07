@@ -1,0 +1,61 @@
+﻿using Microsoft.Data.SqlClient;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SE_Project
+{
+    public static class DbUtils
+    {
+        private static string connectionString = "Data Source=DESKTOP-DG0T52K\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
+
+        public static DataTable GetDataTable(string query)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Open the connection
+                connection.Open();
+
+                // Define your SQL query to retrieve data about societies and count of members
+                // Create a SqlCommand with the query and connection
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Create a DataTable to store the results
+                    DataTable dataTable = new DataTable();
+
+                    // Fill the DataTable with the results of the query
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+
+                    // Bind the DataTable to the DataGridView
+                    return dataTable;
+                }
+
+            }
+
+        }
+
+        public static int DataExists(string query, string userName)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Open the connection
+                connection.Open();
+
+                // Define your SQL query to retrieve data about societies and count of members
+                // Create a SqlCommand with the query and connection
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    return 0;
+                }
+
+            }
+        }
+    }
+}

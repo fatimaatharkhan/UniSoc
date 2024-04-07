@@ -23,5 +23,10 @@ namespace SE_Project
         {
             this.Login_Username = Login_Username;
         }
+
+        private void StudentMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

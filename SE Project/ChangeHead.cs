@@ -13,7 +13,7 @@ namespace SE_Project
 {
     public partial class ChangeHead : Form
     {
-        private string connectionString = "Data Source=G4CE-1080\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
+        private string connectionString = "Data Source=DESKTOP-DG0T52K\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
         private AdminMain adminMain;
         public ChangeHead()
         {
@@ -39,13 +39,7 @@ namespace SE_Project
             try
             {
                 // Create a SqlConnection using the connection string
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    // Open the connection
-                    connection.Open();
-
-                    // Define your SQL query to retrieve data about societies and count of members
-                    string query = @"
+                string query = @"
                     SELECT s.society_id, s.society_name, s.Capacity,
                            COUNT(m.username) AS MemberCount,
                            h.username AS HeadUsername,
@@ -57,22 +51,9 @@ namespace SE_Project
                     GROUP BY s.society_id, s.society_name, s.Capacity, h.username, u.first_name, u.last_name
                     ORDER BY s.society_id";
 
-                    // Create a SqlCommand with the query and connection
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        // Create a DataTable to store the results
-                        DataTable dataTable = new DataTable();
 
-                        // Fill the DataTable with the results of the query
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                        {
-                            adapter.Fill(dataTable);
-                        }
-
-                        // Bind the DataTable to the DataGridView
-                        dataGridView1.DataSource = dataTable;
-                    }
-                }
+                // Bind the DataTable to the DataGridView
+                dataGridView1.DataSource = DbUtils.GetDataTable(query);
             }
             catch (Exception ex)
             {
@@ -205,6 +186,11 @@ namespace SE_Project
 
             adminMain.Show(); // Show the AdminMain form
             this.Hide(); // Hide the AddSociety form
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

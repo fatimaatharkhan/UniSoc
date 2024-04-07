@@ -39,17 +39,18 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(224, 54);
+            label3.Location = new Point(256, 72);
             label3.Name = "label3";
-            label3.Size = new Size(341, 45);
+            label3.Size = new Size(435, 57);
             label3.TabIndex = 7;
             label3.Text = "Admin Main Page";
             // 
             // AddSocietyBtn
             // 
-            AddSocietyBtn.Location = new Point(78, 307);
+            AddSocietyBtn.Location = new Point(107, 320);
+            AddSocietyBtn.Margin = new Padding(3, 4, 3, 4);
             AddSocietyBtn.Name = "AddSocietyBtn";
-            AddSocietyBtn.Size = new Size(131, 23);
+            AddSocietyBtn.Size = new Size(138, 31);
             AddSocietyBtn.TabIndex = 8;
             AddSocietyBtn.Text = "Add Society";
             AddSocietyBtn.UseVisualStyleBackColor = true;
@@ -57,9 +58,10 @@
             // 
             // RemoveSocietyBtn
             // 
-            RemoveSocietyBtn.Location = new Point(265, 307);
+            RemoveSocietyBtn.Location = new Point(286, 320);
+            RemoveSocietyBtn.Margin = new Padding(3, 4, 3, 4);
             RemoveSocietyBtn.Name = "RemoveSocietyBtn";
-            RemoveSocietyBtn.Size = new Size(121, 23);
+            RemoveSocietyBtn.Size = new Size(138, 31);
             RemoveSocietyBtn.TabIndex = 9;
             RemoveSocietyBtn.Text = "Remove Society";
             RemoveSocietyBtn.UseVisualStyleBackColor = true;
@@ -67,9 +69,10 @@
             // 
             // ChangeHeadBtn
             // 
-            ChangeHeadBtn.Location = new Point(431, 307);
+            ChangeHeadBtn.Location = new Point(652, 320);
+            ChangeHeadBtn.Margin = new Padding(3, 4, 3, 4);
             ChangeHeadBtn.Name = "ChangeHeadBtn";
-            ChangeHeadBtn.Size = new Size(107, 23);
+            ChangeHeadBtn.Size = new Size(138, 31);
             ChangeHeadBtn.TabIndex = 10;
             ChangeHeadBtn.Text = "Change Head";
             ChangeHeadBtn.UseVisualStyleBackColor = true;
@@ -77,9 +80,10 @@
             // 
             // RemoveStudentsBtn
             // 
-            RemoveStudentsBtn.Location = new Point(579, 307);
+            RemoveStudentsBtn.Location = new Point(469, 320);
+            RemoveStudentsBtn.Margin = new Padding(3, 4, 3, 4);
             RemoveStudentsBtn.Name = "RemoveStudentsBtn";
-            RemoveStudentsBtn.Size = new Size(120, 23);
+            RemoveStudentsBtn.Size = new Size(138, 31);
             RemoveStudentsBtn.TabIndex = 11;
             RemoveStudentsBtn.Text = "Remove Students";
             RemoveStudentsBtn.UseVisualStyleBackColor = true;
@@ -87,17 +91,19 @@
             // 
             // AdminMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(RemoveStudentsBtn);
             Controls.Add(ChangeHeadBtn);
             Controls.Add(RemoveSocietyBtn);
             Controls.Add(AddSocietyBtn);
             Controls.Add(label3);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AdminMain";
             Text = "AdminMain";
+            Load += AdminMain_Load;
             ResumeLayout(false);
             PerformLayout();
         }
