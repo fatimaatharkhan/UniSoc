@@ -32,7 +32,6 @@
             label3 = new Label();
             viewMySocietiesBtn = new Button();
             dataGridView2 = new DataGridView();
-            assignTaskBtn = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
@@ -71,7 +70,6 @@
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { assignTaskBtn });
             dataGridView2.Location = new Point(12, 131);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
@@ -79,13 +77,6 @@
             dataGridView2.Size = new Size(890, 221);
             dataGridView2.TabIndex = 16;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick_1;
-            // 
-            // assignTaskBtn
-            // 
-            assignTaskBtn.HeaderText = "Assign Tasks";
-            assignTaskBtn.MinimumWidth = 6;
-            assignTaskBtn.Name = "assignTaskBtn";
-            assignTaskBtn.Width = 125;
             // 
             // HeadMain
             // 
@@ -117,6 +108,5 @@
         private Button viewMySocietiesBtn;
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
-        private DataGridViewButtonColumn assignTaskBtn;
     }
 }

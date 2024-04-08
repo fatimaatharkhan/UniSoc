@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -54,6 +55,19 @@ namespace SE_Project
                 {
                     return 0;
                 }
+
+            }
+        }
+
+        public static void Insert(SqlCommand command)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Open the connection
+                connection.Open();
+                command.Connection = connection;              // Define your SQL query to retrieve data about societies and count of members
+                // Create a SqlCommand with the query and connection
+                command.ExecuteNonQuery();
 
             }
         }

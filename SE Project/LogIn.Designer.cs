@@ -33,32 +33,32 @@
             label1 = new Label();
             label2 = new Label();
             LogInBtn = new Button();
-            BackToMainBtn = new Button();
-            label3 = new Label();
             SuspendLayout();
             // 
             // UsernameTxtbox
             // 
-            UsernameTxtbox.Location = new Point(440, 224);
+            UsernameTxtbox.Location = new Point(141, 34);
             UsernameTxtbox.Margin = new Padding(3, 4, 3, 4);
             UsernameTxtbox.Name = "UsernameTxtbox";
             UsernameTxtbox.Size = new Size(175, 27);
             UsernameTxtbox.TabIndex = 0;
+            UsernameTxtbox.Text = "tyler83";
             // 
             // PasswordTxtbox
             // 
-            PasswordTxtbox.Location = new Point(440, 329);
+            PasswordTxtbox.Location = new Point(141, 66);
             PasswordTxtbox.Margin = new Padding(3, 4, 3, 4);
             PasswordTxtbox.Name = "PasswordTxtbox";
             PasswordTxtbox.PasswordChar = '*';
             PasswordTxtbox.Size = new Size(175, 27);
             PasswordTxtbox.TabIndex = 1;
+            PasswordTxtbox.Text = "tyler";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.ImageAlign = ContentAlignment.TopLeft;
-            label1.Location = new Point(277, 224);
+            label1.Location = new Point(48, 37);
             label1.Name = "label1";
             label1.Size = new Size(75, 20);
             label1.TabIndex = 2;
@@ -67,7 +67,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(280, 333);
+            label2.Location = new Point(48, 69);
             label2.Name = "label2";
             label2.Size = new Size(70, 20);
             label2.TabIndex = 3;
@@ -75,51 +75,32 @@
             // 
             // LogInBtn
             // 
-            LogInBtn.Location = new Point(640, 459);
+            LogInBtn.Location = new Point(141, 101);
             LogInBtn.Margin = new Padding(3, 4, 3, 4);
             LogInBtn.Name = "LogInBtn";
-            LogInBtn.Size = new Size(86, 31);
+            LogInBtn.Size = new Size(175, 31);
             LogInBtn.TabIndex = 4;
             LogInBtn.Text = "Log In!";
             LogInBtn.UseVisualStyleBackColor = true;
             LogInBtn.Click += LogInBtn_Click;
             // 
-            // BackToMainBtn
-            // 
-            BackToMainBtn.Location = new Point(214, 459);
-            BackToMainBtn.Margin = new Padding(3, 4, 3, 4);
-            BackToMainBtn.Name = "BackToMainBtn";
-            BackToMainBtn.Size = new Size(113, 31);
-            BackToMainBtn.TabIndex = 5;
-            BackToMainBtn.Text = "Back To Main";
-            BackToMainBtn.UseVisualStyleBackColor = true;
-            BackToMainBtn.Click += BackToMainBtn_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(352, 59);
-            label3.Name = "label3";
-            label3.Size = new Size(295, 57);
-            label3.TabIndex = 6;
-            label3.Text = "LogIn Page";
-            // 
             // LogIn
             // 
+            AcceptButton = LogInBtn;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(914, 600);
-            Controls.Add(label3);
-            Controls.Add(BackToMainBtn);
+            ClientSize = new Size(365, 182);
             Controls.Add(LogInBtn);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(PasswordTxtbox);
             Controls.Add(UsernameTxtbox);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "LogIn";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LogIn";
             Load += LogIn_Load;
             ResumeLayout(false);
@@ -133,7 +114,6 @@
         private Label label1;
         private Label label2;
         private Button LogInBtn;
-        private Button BackToMainBtn;
         private Label label3;
     }
 }

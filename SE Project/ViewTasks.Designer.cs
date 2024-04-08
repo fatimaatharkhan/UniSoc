@@ -1,6 +1,6 @@
 ﻿namespace SE_Project
 {
-    partial class StudentMain
+    partial class ViewTasks
     {
         /// <summary>
         /// Required designer variable.
@@ -29,41 +29,44 @@
         private void InitializeComponent()
         {
             label3 = new Label();
-            viewTasksBtn = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(181, 66);
+            label3.Location = new Point(326, 29);
             label3.Name = "label3";
-            label3.Size = new Size(472, 57);
-            label3.TabIndex = 8;
-            label3.Text = "Student Main Page";
+            label3.Size = new Size(158, 57);
+            label3.TabIndex = 9;
+            label3.Text = "Tasks";
+            label3.Click += label3_Click;
             // 
-            // viewTasksBtn
+            // dataGridView1
             // 
-            viewTasksBtn.Location = new Point(349, 253);
-            viewTasksBtn.Name = "viewTasksBtn";
-            viewTasksBtn.Size = new Size(121, 29);
-            viewTasksBtn.TabIndex = 9;
-            viewTasksBtn.Text = "View Tasks";
-            viewTasksBtn.UseVisualStyleBackColor = true;
-            viewTasksBtn.Click += viewTasksBtn_Click;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(-45, 115);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(845, 221);
+            dataGridView1.TabIndex = 17;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // StudentMain
+            // ViewTasks
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(836, 469);
-            Controls.Add(viewTasksBtn);
+            ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(label3);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "StudentMain";
-            Text = "StudentMain";
-            Load += StudentMain_Load;
+            Name = "ViewTasks";
+            Text = "ViewTasks";
+            Shown += ViewTasks_Shown_1;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -71,6 +74,6 @@
         #endregion
 
         private Label label3;
-        private Button viewTasksBtn;
+        private DataGridView dataGridView1;
     }
 }

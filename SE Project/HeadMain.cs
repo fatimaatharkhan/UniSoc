@@ -45,6 +45,11 @@ namespace SE_Project
             string query = @"
                     select S.society_id, S.society_name from Society S inner join Head H on H.society_id = S.society_id where H.username = '" + this.Login_Username + "'; ";
             dataGridView2.DataSource = DbUtils.GetDataTable(query);
+            DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+            buttonColumn.HeaderText = "Assign Task";
+            dataGridView2.Columns.Add(buttonColumn);
+            buttonColumn.Text = "...";
+            //uttonColumn
         }
 
         private void HeadMain_Shown(object sender, EventArgs e)
@@ -62,6 +67,7 @@ namespace SE_Project
                 //MessageBox.Show(currRow.Cells["society_id"].Value.ToString());
                 AssignTasks assignTasks = new AssignTasks();
                 assignTasks.SetSocietyId(Convert.ToInt32(currRow.Cells["society_id"].Value));
+                assignTasks.SetUserName(Login_Username);
                 assignTasks.Show();
             }
         }

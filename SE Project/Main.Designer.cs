@@ -34,9 +34,10 @@
             // 
             // LogInBtn
             // 
-            LogInBtn.Location = new Point(517, 328);
+            LogInBtn.Location = new Point(325, 66);
+            LogInBtn.Margin = new Padding(3, 4, 3, 4);
             LogInBtn.Name = "LogInBtn";
-            LogInBtn.Size = new Size(75, 23);
+            LogInBtn.Size = new Size(86, 31);
             LogInBtn.TabIndex = 0;
             LogInBtn.Text = "LogIn";
             LogInBtn.UseVisualStyleBackColor = true;
@@ -45,22 +46,27 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Tahoma", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(6, 65);
+            label1.Dock = DockStyle.Left;
+            label1.Font = new Font("Tahoma", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(782, 42);
+            label1.Size = new Size(762, 41);
             label1.TabIndex = 2;
             label1.Text = "FAST STUDENT SOCIETY MANAGEMENT SYSTEM";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(766, 123);
             Controls.Add(label1);
             Controls.Add(LogInBtn);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";
             ResumeLayout(false);
             PerformLayout();

@@ -49,16 +49,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(247, 232);
+            label1.Location = new Point(247, 224);
             label1.Name = "label1";
             label1.Size = new Size(101, 20);
             label1.TabIndex = 9;
             label1.Text = "Society Name";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(247, 300);
+            label2.Location = new Point(247, 292);
             label2.Name = "label2";
             label2.Size = new Size(66, 20);
             label2.TabIndex = 10;
@@ -71,6 +72,7 @@
             SocietyNameTxtbox.Name = "SocietyNameTxtbox";
             SocietyNameTxtbox.Size = new Size(203, 27);
             SocietyNameTxtbox.TabIndex = 11;
+            SocietyNameTxtbox.TextChanged += SocietyNameTxtbox_TextChanged;
             // 
             // CapacityTxtbox
             // 
@@ -82,7 +84,7 @@
             // 
             // AddSocietyBtn
             // 
-            AddSocietyBtn.Location = new Point(569, 456);
+            AddSocietyBtn.Location = new Point(421, 353);
             AddSocietyBtn.Margin = new Padding(3, 4, 3, 4);
             AddSocietyBtn.Name = "AddSocietyBtn";
             AddSocietyBtn.Size = new Size(119, 31);

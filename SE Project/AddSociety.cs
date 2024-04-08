@@ -86,6 +86,15 @@ namespace SE_Project
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SocietyNameTxtbox_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 
 }

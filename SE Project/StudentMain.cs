@@ -28,5 +28,12 @@ namespace SE_Project
         {
 
         }
+
+        private void viewTasksBtn_Click(object sender, EventArgs e)
+        {
+            ViewTasks viewTasks = new ViewTasks();
+            viewTasks.SetUserName(this.Login_Username);
+            viewTasks.Show();
+        }
     }
 }
