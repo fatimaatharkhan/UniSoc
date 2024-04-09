@@ -37,28 +37,28 @@
             // 
             // UsernameTxtbox
             // 
-            UsernameTxtbox.Location = new Point(141, 34);
+            UsernameTxtbox.Location = new Point(176, 66);
             UsernameTxtbox.Margin = new Padding(3, 4, 3, 4);
             UsernameTxtbox.Name = "UsernameTxtbox";
             UsernameTxtbox.Size = new Size(175, 27);
             UsernameTxtbox.TabIndex = 0;
-            UsernameTxtbox.Text = "tyler83";
+            UsernameTxtbox.Text = "amycantrell";
             // 
             // PasswordTxtbox
             // 
-            PasswordTxtbox.Location = new Point(141, 66);
+            PasswordTxtbox.Location = new Point(176, 98);
             PasswordTxtbox.Margin = new Padding(3, 4, 3, 4);
             PasswordTxtbox.Name = "PasswordTxtbox";
             PasswordTxtbox.PasswordChar = '*';
             PasswordTxtbox.Size = new Size(175, 27);
             PasswordTxtbox.TabIndex = 1;
-            PasswordTxtbox.Text = "tyler";
+            PasswordTxtbox.Text = "amy";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.ImageAlign = ContentAlignment.TopLeft;
-            label1.Location = new Point(48, 37);
+            label1.Location = new Point(83, 69);
             label1.Name = "label1";
             label1.Size = new Size(75, 20);
             label1.TabIndex = 2;
@@ -67,7 +67,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(48, 69);
+            label2.Location = new Point(83, 101);
             label2.Name = "label2";
             label2.Size = new Size(70, 20);
             label2.TabIndex = 3;
@@ -75,7 +75,7 @@
             // 
             // LogInBtn
             // 
-            LogInBtn.Location = new Point(141, 101);
+            LogInBtn.Location = new Point(176, 133);
             LogInBtn.Margin = new Padding(3, 4, 3, 4);
             LogInBtn.Name = "LogInBtn";
             LogInBtn.Size = new Size(175, 31);
@@ -90,7 +90,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(365, 182);
+            ClientSize = new Size(477, 250);
             Controls.Add(LogInBtn);
             Controls.Add(label2);
             Controls.Add(label1);

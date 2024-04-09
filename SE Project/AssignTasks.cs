@@ -65,5 +65,10 @@ namespace SE_Project
             DbUtils.Insert(cm1);
             MessageBox.Show("Task Assigned!");
         }
+
+        private void cmbStudents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

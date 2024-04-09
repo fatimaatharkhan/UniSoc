@@ -43,7 +43,10 @@ namespace SE_Project
         {
             //dataGridView1 = new DataGridView();
             string query = @"
-                    select S.society_id, S.society_name from Society S inner join Head H on H.society_id = S.society_id where H.username = '" + this.Login_Username + "'; ";
+                    select E.event_id, E.event_name, S.society_name from Event E
+                    inner join Head H on E.society_id = H.society_id 
+                    inner join Society S on E.society_id = S.society_id 
+                    where H.username = '" + this.Login_Username + "'; ";
             dataGridView2.DataSource = DbUtils.GetDataTable(query);
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
             buttonColumn.HeaderText = "Assign Task";
@@ -65,11 +68,22 @@ namespace SE_Project
             {
                 var currRow = senderGrid.Rows[e.RowIndex];
                 //MessageBox.Show(currRow.Cells["society_id"].Value.ToString());
-                AssignTasks assignTasks = new AssignTasks();
-                assignTasks.SetSocietyId(Convert.ToInt32(currRow.Cells["society_id"].Value));
-                assignTasks.SetUserName(Login_Username);
-                assignTasks.Show();
+                //AssignTasks assignTasks = new AssignTasks();
+                //assignTasks.SetSocietyId(Convert.ToInt32(currRow.Cells["society_id"].Value));
+                //assignTasks.SetUserName(Login_Username);
+                //assignTasks.Show();
+
+                ViewTeam viewTeam = new ViewTeam();
+                viewTeam.setEventId(Convert.ToInt32(currRow.Cells["event_id"].Value));
+                viewTeam.Show();
             }
+        }
+
+        private void viewAssignTasksBtn_Click(object sender, EventArgs e)
+        {
+            viewAssignedTasks viewAssignedTasks = new viewAssignedTasks();
+            viewAssignedTasks.SetUserName(Login_Username);
+            viewAssignedTasks.Show();
         }
     }
 }

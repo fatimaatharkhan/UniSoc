@@ -73,6 +73,7 @@
             cmbStudents.Size = new Size(151, 28);
             cmbStudents.TabIndex = 16;
             cmbStudents.ValueMember = "StudentId";
+            cmbStudents.SelectedIndexChanged += cmbStudents_SelectedIndexChanged;
             // 
             // txtTaskDesc
             // 

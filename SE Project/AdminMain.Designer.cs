@@ -33,13 +33,15 @@
             RemoveSocietyBtn = new Button();
             ChangeHeadBtn = new Button();
             RemoveStudentsBtn = new Button();
+            viewEventsBtn = new Button();
+            addEventsBtn = new Button();
             SuspendLayout();
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(256, 72);
+            label3.Location = new Point(214, 46);
             label3.Name = "label3";
             label3.Size = new Size(435, 57);
             label3.TabIndex = 7;
@@ -47,7 +49,7 @@
             // 
             // AddSocietyBtn
             // 
-            AddSocietyBtn.Location = new Point(107, 320);
+            AddSocietyBtn.Location = new Point(109, 205);
             AddSocietyBtn.Margin = new Padding(3, 4, 3, 4);
             AddSocietyBtn.Name = "AddSocietyBtn";
             AddSocietyBtn.Size = new Size(138, 31);
@@ -58,7 +60,7 @@
             // 
             // RemoveSocietyBtn
             // 
-            RemoveSocietyBtn.Location = new Point(286, 320);
+            RemoveSocietyBtn.Location = new Point(275, 205);
             RemoveSocietyBtn.Margin = new Padding(3, 4, 3, 4);
             RemoveSocietyBtn.Name = "RemoveSocietyBtn";
             RemoveSocietyBtn.Size = new Size(138, 31);
@@ -69,7 +71,7 @@
             // 
             // ChangeHeadBtn
             // 
-            ChangeHeadBtn.Location = new Point(652, 320);
+            ChangeHeadBtn.Location = new Point(606, 205);
             ChangeHeadBtn.Margin = new Padding(3, 4, 3, 4);
             ChangeHeadBtn.Name = "ChangeHeadBtn";
             ChangeHeadBtn.Size = new Size(138, 31);
@@ -80,7 +82,7 @@
             // 
             // RemoveStudentsBtn
             // 
-            RemoveStudentsBtn.Location = new Point(469, 320);
+            RemoveStudentsBtn.Location = new Point(439, 205);
             RemoveStudentsBtn.Margin = new Padding(3, 4, 3, 4);
             RemoveStudentsBtn.Name = "RemoveStudentsBtn";
             RemoveStudentsBtn.Size = new Size(138, 31);
@@ -89,12 +91,36 @@
             RemoveStudentsBtn.UseVisualStyleBackColor = true;
             RemoveStudentsBtn.Click += RemoveStudentsBtn_Click;
             // 
+            // viewEventsBtn
+            // 
+            viewEventsBtn.Location = new Point(275, 266);
+            viewEventsBtn.Margin = new Padding(3, 4, 3, 4);
+            viewEventsBtn.Name = "viewEventsBtn";
+            viewEventsBtn.Size = new Size(138, 31);
+            viewEventsBtn.TabIndex = 12;
+            viewEventsBtn.Text = "View Events";
+            viewEventsBtn.UseVisualStyleBackColor = true;
+            viewEventsBtn.Click += viewEventsBtn_Click;
+            // 
+            // addEventsBtn
+            // 
+            addEventsBtn.Location = new Point(439, 266);
+            addEventsBtn.Margin = new Padding(3, 4, 3, 4);
+            addEventsBtn.Name = "addEventsBtn";
+            addEventsBtn.Size = new Size(138, 31);
+            addEventsBtn.TabIndex = 13;
+            addEventsBtn.Text = "Add Events";
+            addEventsBtn.UseVisualStyleBackColor = true;
+            addEventsBtn.Click += addEventsBtn_Click;
+            // 
             // AdminMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(846, 453);
+            Controls.Add(addEventsBtn);
+            Controls.Add(viewEventsBtn);
             Controls.Add(RemoveStudentsBtn);
             Controls.Add(ChangeHeadBtn);
             Controls.Add(RemoveSocietyBtn);
@@ -115,5 +141,7 @@
         private Button RemoveSocietyBtn;
         private Button ChangeHeadBtn;
         private Button RemoveStudentsBtn;
+        private Button viewEventsBtn;
+        private Button addEventsBtn;
     }
 }

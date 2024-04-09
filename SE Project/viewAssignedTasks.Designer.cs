@@ -1,6 +1,6 @@
 ﻿namespace SE_Project
 {
-    partial class ViewTasks
+    partial class viewAssignedTasks
     {
         /// <summary>
         /// Required designer variable.
@@ -28,44 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label3 = new Label();
             dataGridView1 = new DataGridView();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(0, 109);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(803, 221);
+            dataGridView1.TabIndex = 19;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(326, 29);
+            label3.Location = new Point(322, 5);
             label3.Name = "label3";
             label3.Size = new Size(158, 57);
-            label3.TabIndex = 9;
+            label3.TabIndex = 18;
             label3.Text = "Tasks";
-            label3.Click += label3_Click;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(1, 119);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(798, 221);
-            dataGridView1.TabIndex = 17;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // ViewTasks
+            // viewAssignedTasks
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(801, 490);
+            ClientSize = new Size(804, 450);
             Controls.Add(dataGridView1);
             Controls.Add(label3);
-            Name = "ViewTasks";
-            Text = "ViewTasks";
-            Shown += ViewTasks_Shown_1;
+            Name = "viewAssignedTasks";
+            Text = "viewAssignedTasks";
+            Shown += viewAssignedTasks_Shown;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -73,7 +71,7 @@
 
         #endregion
 
-        private Label label3;
         private DataGridView dataGridView1;
+        private Label label3;
     }
 }

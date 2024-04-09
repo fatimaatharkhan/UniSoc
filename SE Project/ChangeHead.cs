@@ -162,21 +162,37 @@ namespace SE_Project
         }
         private void UpdateHead(string societyName, string newHeadUsername)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            //using (SqlConnection connection = new SqlConnection(connectionString))
+            //{
+            //    connection.Open();
+
+            //    string query = @"
+            //UPDATE Head
+            //SET username = @NewHeadUsername
+            //WHERE society_id = (SELECT society_id FROM Society WHERE society_name = @SocietyName)";
+
+            //    using (SqlCommand command = new SqlCommand(query, connection))
+            //    {
+            //        command.Parameters.AddWithValue("@NewHeadUsername", newHeadUsername);
+            //        command.Parameters.AddWithValue("@SocietyName", societyName);
+            //        command.ExecuteNonQuery();
+            //    }
+            //}
+
+            var query = "SELECT COUNT(*) FROM Task WHERE student_username = '@NewHeadUsername';";
+            var cm1 = new SqlCommand(query);
+
+            int x = DbUtils.DataExists(cm1);
+            if (x == 0) {
+                query = @" UPDATE Head SET username = @NewHeadUsername WHERE society_id = (SELECT society_id FROM Society WHERE society_name = @SocietyName)";
+                var cm2 = new SqlCommand(query);
+                cm2.Parameters.AddWithValue("@NewHeadUsername", newHeadUsername);
+                cm2.Parameters.AddWithValue("@SocietyName", societyName);
+                DbUtils.Insert(cm2);
+            }
+            else
             {
-                connection.Open();
-
-                string query = @"
-            UPDATE Head
-            SET username = @NewHeadUsername
-            WHERE society_id = (SELECT society_id FROM Society WHERE society_name = @SocietyName)";
-
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@NewHeadUsername", newHeadUsername);
-                    command.Parameters.AddWithValue("@SocietyName", societyName);
-                    command.ExecuteNonQuery();
-                }
+                MessageBox.Show("The Student you want to make the head has tasks assigned to them. Please delete those tasks before proceeding.");
             }
         }
 

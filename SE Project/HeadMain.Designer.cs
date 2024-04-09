@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            assignTasksBtn = new Button();
+            viewAssignTasksBtn = new Button();
             label3 = new Label();
             viewMySocietiesBtn = new Button();
             dataGridView2 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
-            // assignTasksBtn
+            // viewAssignTasksBtn
             // 
-            assignTasksBtn.Location = new Point(297, 417);
-            assignTasksBtn.Margin = new Padding(3, 4, 3, 4);
-            assignTasksBtn.Name = "assignTasksBtn";
-            assignTasksBtn.Size = new Size(138, 31);
-            assignTasksBtn.TabIndex = 14;
-            assignTasksBtn.Text = "Assign Task";
-            assignTasksBtn.UseVisualStyleBackColor = true;
+            viewAssignTasksBtn.Location = new Point(243, 378);
+            viewAssignTasksBtn.Margin = new Padding(3, 4, 3, 4);
+            viewAssignTasksBtn.Name = "viewAssignTasksBtn";
+            viewAssignTasksBtn.Size = new Size(138, 31);
+            viewAssignTasksBtn.TabIndex = 14;
+            viewAssignTasksBtn.Text = "View Tasks";
+            viewAssignTasksBtn.UseVisualStyleBackColor = true;
+            viewAssignTasksBtn.Click += viewAssignTasksBtn_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(261, 32);
+            label3.Location = new Point(213, 30);
             label3.Name = "label3";
             label3.Size = new Size(406, 57);
             label3.TabIndex = 12;
@@ -58,7 +59,7 @@
             // 
             // viewMySocietiesBtn
             // 
-            viewMySocietiesBtn.Location = new Point(481, 417);
+            viewMySocietiesBtn.Location = new Point(437, 378);
             viewMySocietiesBtn.Margin = new Padding(3, 4, 3, 4);
             viewMySocietiesBtn.Name = "viewMySocietiesBtn";
             viewMySocietiesBtn.Size = new Size(138, 31);
@@ -70,11 +71,11 @@
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 131);
+            dataGridView2.Location = new Point(12, 116);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(890, 221);
+            dataGridView2.Size = new Size(806, 221);
             dataGridView2.TabIndex = 16;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick_1;
             // 
@@ -83,10 +84,10 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(830, 489);
             Controls.Add(dataGridView2);
             Controls.Add(viewMySocietiesBtn);
-            Controls.Add(assignTasksBtn);
+            Controls.Add(viewAssignTasksBtn);
             Controls.Add(label3);
             Margin = new Padding(3, 4, 3, 4);
             Name = "HeadMain";
@@ -102,7 +103,7 @@
 
         private Button RemoveStudentsBtn;
         private Button ChangeHeadBtn;
-        private Button assignTasksBtn;
+        private Button viewAssignTasksBtn;
         private Button AddSocietyBtn;
         private Label label3;
         private Button viewMySocietiesBtn;

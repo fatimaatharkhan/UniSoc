@@ -42,20 +42,15 @@ namespace SE_Project
 
         }
 
-        public static int DataExists(string query, string userName)
+        public static int DataExists(SqlCommand command)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 // Open the connection
                 connection.Open();
-
-                // Define your SQL query to retrieve data about societies and count of members
-                // Create a SqlCommand with the query and connection
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    return 0;
-                }
-
+                command.Connection = connection;
+                var result = command.ExecuteScalar();
+                return Convert.ToInt32(result);
             }
         }
 

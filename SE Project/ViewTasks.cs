@@ -50,7 +50,7 @@ namespace SE_Project
 
         private void DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void label3_Click(object sender, EventArgs e)

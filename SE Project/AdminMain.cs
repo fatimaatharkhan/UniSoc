@@ -61,5 +61,17 @@ namespace SE_Project
         {
 
         }
+
+        private void viewEventsBtn_Click(object sender, EventArgs e)
+        {
+            AdminViewEvents adminViewEvents = new AdminViewEvents();
+            adminViewEvents.Show();
+        }
+
+        private void addEventsBtn_Click(object sender, EventArgs e)
+        {
+            AddEvent addEvent = new AddEvent();
+            addEvent.Show();
+        }
     }
 }
