@@ -43,13 +43,13 @@ namespace SE_Project
         {
             //dataGridView1 = new DataGridView();
             string query = @"
-                    select E.event_id, E.event_name, S.society_name from Event E
+                    select E.event_id, E.event_name, S.society_id, S.society_name from Event E
                     inner join Head H on E.society_id = H.society_id 
                     inner join Society S on E.society_id = S.society_id 
                     where H.username = '" + this.Login_Username + "'; ";
             dataGridView2.DataSource = DbUtils.GetDataTable(query);
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
-            buttonColumn.HeaderText = "Assign Task";
+            buttonColumn.HeaderText = "View Management Team";
             dataGridView2.Columns.Add(buttonColumn);
             buttonColumn.Text = "...";
             //uttonColumn
@@ -75,6 +75,8 @@ namespace SE_Project
 
                 ViewTeam viewTeam = new ViewTeam();
                 viewTeam.setEventId(Convert.ToInt32(currRow.Cells["event_id"].Value));
+                viewTeam.setSocietyId(Convert.ToInt32(currRow.Cells["society_id"].Value));
+                viewTeam.SetUserName(this.Login_Username);
                 viewTeam.Show();
             }
         }

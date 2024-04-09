@@ -58,10 +58,8 @@ namespace SE_Project
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                // Open the connection
                 connection.Open();
-                command.Connection = connection;              // Define your SQL query to retrieve data about societies and count of members
-                // Create a SqlCommand with the query and connection
+                command.Connection = connection;
                 command.ExecuteNonQuery();
 
             }

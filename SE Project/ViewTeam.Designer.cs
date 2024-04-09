@@ -31,6 +31,8 @@
             dataGridView2 = new DataGridView();
             addTeamBtn = new Button();
             label3 = new Label();
+            cmbStudents = new ComboBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
@@ -41,17 +43,18 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(776, 221);
+            dataGridView2.Size = new Size(776, 181);
             dataGridView2.TabIndex = 19;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // addTeamBtn
             // 
-            addTeamBtn.Location = new Point(307, 386);
+            addTeamBtn.Location = new Point(365, 380);
             addTeamBtn.Margin = new Padding(3, 4, 3, 4);
             addTeamBtn.Name = "addTeamBtn";
-            addTeamBtn.Size = new Size(173, 31);
+            addTeamBtn.Size = new Size(116, 31);
             addTeamBtn.TabIndex = 18;
-            addTeamBtn.Text = "Add New Member";
+            addTeamBtn.Text = "Add Member";
             addTeamBtn.UseVisualStyleBackColor = true;
             addTeamBtn.Click += addTeamBtn_Click;
             // 
@@ -65,17 +68,40 @@
             label3.TabIndex = 17;
             label3.Text = "Event Management Team";
             // 
+            // cmbStudents
+            // 
+            cmbStudents.DisplayMember = "StudentName";
+            cmbStudents.FormattingEnabled = true;
+            cmbStudents.Location = new Point(365, 345);
+            cmbStudents.Name = "cmbStudents";
+            cmbStudents.Size = new Size(151, 28);
+            cmbStudents.TabIndex = 20;
+            cmbStudents.ValueMember = "StudentId";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(234, 349);
+            label1.Name = "label1";
+            label1.Size = new Size(107, 20);
+            label1.TabIndex = 21;
+            label1.Text = "Student Name:";
+            label1.Click += label1_Click;
+            // 
             // ViewTeam
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(cmbStudents);
             Controls.Add(dataGridView2);
             Controls.Add(addTeamBtn);
             Controls.Add(label3);
             Name = "ViewTeam";
             Text = "ViewTeam";
+            Shown += ViewTeam_Shown;
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -86,5 +112,7 @@
         private DataGridView dataGridView2;
         private Button addTeamBtn;
         private Label label3;
+        private ComboBox cmbStudents;
+        private Label label1;
     }
 }
