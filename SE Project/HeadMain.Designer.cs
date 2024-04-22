@@ -32,15 +32,15 @@
             label3 = new Label();
             viewMySocietiesBtn = new Button();
             dataGridView2 = new DataGridView();
+            ReserverResourcesBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // viewAssignTasksBtn
             // 
-            viewAssignTasksBtn.Location = new Point(243, 378);
-            viewAssignTasksBtn.Margin = new Padding(3, 4, 3, 4);
+            viewAssignTasksBtn.Location = new Point(97, 284);
             viewAssignTasksBtn.Name = "viewAssignTasksBtn";
-            viewAssignTasksBtn.Size = new Size(138, 31);
+            viewAssignTasksBtn.Size = new Size(121, 23);
             viewAssignTasksBtn.TabIndex = 14;
             viewAssignTasksBtn.Text = "View Tasks";
             viewAssignTasksBtn.UseVisualStyleBackColor = true;
@@ -50,19 +50,18 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(213, 30);
+            label3.Location = new Point(186, 22);
             label3.Name = "label3";
-            label3.Size = new Size(406, 57);
+            label3.Size = new Size(318, 45);
             label3.TabIndex = 12;
             label3.Text = "Head Main Page";
             label3.Click += label3_Click;
             // 
             // viewMySocietiesBtn
             // 
-            viewMySocietiesBtn.Location = new Point(437, 378);
-            viewMySocietiesBtn.Margin = new Padding(3, 4, 3, 4);
+            viewMySocietiesBtn.Location = new Point(299, 284);
             viewMySocietiesBtn.Name = "viewMySocietiesBtn";
-            viewMySocietiesBtn.Size = new Size(138, 31);
+            viewMySocietiesBtn.Size = new Size(121, 23);
             viewMySocietiesBtn.TabIndex = 15;
             viewMySocietiesBtn.Text = "View My Societies";
             viewMySocietiesBtn.UseVisualStyleBackColor = true;
@@ -71,25 +70,36 @@
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 116);
+            dataGridView2.Location = new Point(10, 87);
+            dataGridView2.Margin = new Padding(3, 2, 3, 2);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(806, 221);
+            dataGridView2.Size = new Size(705, 166);
             dataGridView2.TabIndex = 16;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick_1;
             // 
+            // ReserverResourcesBtn
+            // 
+            ReserverResourcesBtn.Location = new Point(490, 284);
+            ReserverResourcesBtn.Name = "ReserverResourcesBtn";
+            ReserverResourcesBtn.Size = new Size(129, 23);
+            ReserverResourcesBtn.TabIndex = 17;
+            ReserverResourcesBtn.Text = "Reserve Resources";
+            ReserverResourcesBtn.UseVisualStyleBackColor = true;
+            ReserverResourcesBtn.Click += ReserverResourcesBtn_Click;
+            // 
             // HeadMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(830, 489);
+            ClientSize = new Size(726, 367);
+            Controls.Add(ReserverResourcesBtn);
             Controls.Add(dataGridView2);
             Controls.Add(viewMySocietiesBtn);
             Controls.Add(viewAssignTasksBtn);
             Controls.Add(label3);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "HeadMain";
             Text = "TeacherMain";
             Load += HeadMain_Load;
@@ -109,5 +119,6 @@
         private Button viewMySocietiesBtn;
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
+        private Button ReserverResourcesBtn;
     }
 }

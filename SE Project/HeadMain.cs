@@ -87,5 +87,12 @@ namespace SE_Project
             viewAssignedTasks.SetUserName(Login_Username);
             viewAssignedTasks.Show();
         }
+
+        private void ReserverResourcesBtn_Click(object sender, EventArgs e)
+        {
+            ReserveResources reserveResources = new ReserveResources();
+            reserveResources.SetUsername(Login_Username);
+            reserveResources.Show();
+        }
     }
 }
