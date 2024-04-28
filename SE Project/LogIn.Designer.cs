@@ -37,48 +37,43 @@
             // 
             // UsernameTxtbox
             // 
-            UsernameTxtbox.Location = new Point(176, 66);
-            UsernameTxtbox.Margin = new Padding(3, 4, 3, 4);
+            UsernameTxtbox.Location = new Point(154, 50);
             UsernameTxtbox.Name = "UsernameTxtbox";
-            UsernameTxtbox.Size = new Size(175, 27);
+            UsernameTxtbox.Size = new Size(154, 23);
             UsernameTxtbox.TabIndex = 0;
-            UsernameTxtbox.Text = "douglas70";
             // 
             // PasswordTxtbox
             // 
-            PasswordTxtbox.Location = new Point(176, 98);
-            PasswordTxtbox.Margin = new Padding(3, 4, 3, 4);
+            PasswordTxtbox.Location = new Point(154, 74);
             PasswordTxtbox.Name = "PasswordTxtbox";
             PasswordTxtbox.PasswordChar = '*';
-            PasswordTxtbox.Size = new Size(175, 27);
+            PasswordTxtbox.Size = new Size(154, 23);
             PasswordTxtbox.TabIndex = 1;
-            PasswordTxtbox.Text = "456";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.ImageAlign = ContentAlignment.TopLeft;
-            label1.Location = new Point(83, 69);
+            label1.Location = new Point(73, 52);
             label1.Name = "label1";
-            label1.Size = new Size(75, 20);
+            label1.Size = new Size(60, 15);
             label1.TabIndex = 2;
             label1.Text = "Username";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(83, 101);
+            label2.Location = new Point(73, 76);
             label2.Name = "label2";
-            label2.Size = new Size(70, 20);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 3;
             label2.Text = "Password";
             // 
             // LogInBtn
             // 
-            LogInBtn.Location = new Point(176, 133);
-            LogInBtn.Margin = new Padding(3, 4, 3, 4);
+            LogInBtn.Location = new Point(154, 100);
             LogInBtn.Name = "LogInBtn";
-            LogInBtn.Size = new Size(175, 31);
+            LogInBtn.Size = new Size(153, 23);
             LogInBtn.TabIndex = 4;
             LogInBtn.Text = "Log In!";
             LogInBtn.UseVisualStyleBackColor = true;
@@ -87,17 +82,16 @@
             // LogIn
             // 
             AcceptButton = LogInBtn;
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(477, 250);
+            ClientSize = new Size(417, 188);
             Controls.Add(LogInBtn);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(PasswordTxtbox);
             Controls.Add(UsernameTxtbox);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "LogIn";
             StartPosition = FormStartPosition.CenterScreen;

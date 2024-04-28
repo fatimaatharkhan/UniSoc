@@ -33,12 +33,13 @@
             viewMySocietiesBtn = new Button();
             dataGridView2 = new DataGridView();
             ReserverResourcesBtn = new Button();
+            GenerateReportBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // viewAssignTasksBtn
             // 
-            viewAssignTasksBtn.Location = new Point(97, 284);
+            viewAssignTasksBtn.Location = new Point(23, 284);
             viewAssignTasksBtn.Name = "viewAssignTasksBtn";
             viewAssignTasksBtn.Size = new Size(121, 23);
             viewAssignTasksBtn.TabIndex = 14;
@@ -59,7 +60,7 @@
             // 
             // viewMySocietiesBtn
             // 
-            viewMySocietiesBtn.Location = new Point(299, 284);
+            viewMySocietiesBtn.Location = new Point(205, 284);
             viewMySocietiesBtn.Name = "viewMySocietiesBtn";
             viewMySocietiesBtn.Size = new Size(121, 23);
             viewMySocietiesBtn.TabIndex = 15;
@@ -81,7 +82,7 @@
             // 
             // ReserverResourcesBtn
             // 
-            ReserverResourcesBtn.Location = new Point(490, 284);
+            ReserverResourcesBtn.Location = new Point(392, 284);
             ReserverResourcesBtn.Name = "ReserverResourcesBtn";
             ReserverResourcesBtn.Size = new Size(129, 23);
             ReserverResourcesBtn.TabIndex = 17;
@@ -89,12 +90,23 @@
             ReserverResourcesBtn.UseVisualStyleBackColor = true;
             ReserverResourcesBtn.Click += ReserverResourcesBtn_Click;
             // 
+            // GenerateReportBtn
+            // 
+            GenerateReportBtn.Location = new Point(560, 284);
+            GenerateReportBtn.Name = "GenerateReportBtn";
+            GenerateReportBtn.Size = new Size(120, 23);
+            GenerateReportBtn.TabIndex = 18;
+            GenerateReportBtn.Text = "Generate Report";
+            GenerateReportBtn.UseVisualStyleBackColor = true;
+            GenerateReportBtn.Click += GenerateReportBtn_Click;
+            // 
             // HeadMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(726, 367);
+            Controls.Add(GenerateReportBtn);
             Controls.Add(ReserverResourcesBtn);
             Controls.Add(dataGridView2);
             Controls.Add(viewMySocietiesBtn);
@@ -120,5 +132,6 @@
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
         private Button ReserverResourcesBtn;
+        private Button GenerateReportBtn;
     }
 }

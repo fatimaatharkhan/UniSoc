@@ -42,6 +42,75 @@ namespace SE_Project
                 string role = ""; // Initialize role variable
                 string query = "SELECT username, password, role FROM Users WHERE username = @Username AND password = @Password";
 
+                // Password validation flags
+                bool validLength = pw.Length > 5 && pw.Length < 50;
+                bool hasSpecialChar = false;
+                bool hasLowerCase = false;
+                bool hasUpperCase = false;
+                bool hasNumber = false;
+                bool hasSpace = false;
+
+                // Check password for validity
+                foreach (char c in pw)
+                {
+                    if (!char.IsLetterOrDigit(c) && !char.IsWhiteSpace(c))
+                    {
+                        hasSpecialChar = true;
+                    }
+                    if (char.IsLower(c))
+                    {
+                        hasLowerCase = true;
+                    }
+                    if (char.IsUpper(c))
+                    {
+                        hasUpperCase = true;
+                    }
+                    if (char.IsNumber(c))
+                    {
+                        hasNumber = true;
+                    }
+                    if (char.IsWhiteSpace(c))
+                    {
+                        hasSpace = true;
+                    }
+                }
+
+                // Error message
+                string errorMessage = "Password must:\n";
+                if (!validLength)
+                {
+                    errorMessage += "- Be between 6 and 49 characters long.\n";
+                }
+                if (!hasSpecialChar)
+                {
+                    errorMessage += "- Contain at least one special character.\n";
+                    errorMessage += "Special characters include: !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\n";
+                }
+                if (!hasLowerCase)
+                {
+                    errorMessage += "- Contain at least one lowercase letter.\n";
+                }
+                if (!hasUpperCase)
+                {
+                    errorMessage += "- Contain at least one uppercase letter.\n";
+                }
+                if (!hasNumber)
+                {
+                    errorMessage += "- Contain at least one number.\n";
+                }
+                if (hasSpace)
+                {
+                    errorMessage += "- Not contain any spaces.\n";
+                }
+
+                // Display error message if any
+                if (!validLength || !hasSpecialChar || !hasLowerCase || !hasUpperCase || !hasNumber || hasSpace)
+                {
+                    MessageBox.Show(errorMessage, "Password Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Exit the function if password is invalid
+                }
+
+                // Proceed with database query if password is valid
                 using (SqlCommand cm = new SqlCommand(query, conn))
                 {
                     cm.Parameters.AddWithValue("@Username", un);
@@ -71,9 +140,9 @@ namespace SE_Project
                                     this.Hide();
                                     break;
                                 case "head":
-                                    HeadMain teacherHome = new HeadMain();
-                                    teacherHome.RecieveUsername(un);
-                                    teacherHome.Show();
+                                    HeadMain HeadHome = new HeadMain();
+                                    HeadHome.RecieveUsername(un);
+                                    HeadHome.Show();
                                     this.Hide();
                                     break;
                                 default:
@@ -89,6 +158,7 @@ namespace SE_Project
                 }
             }
         }
+
 
         private void BackToMainBtn_Click(object sender, EventArgs e)
         {

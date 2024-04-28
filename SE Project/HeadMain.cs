@@ -94,5 +94,12 @@ namespace SE_Project
             reserveResources.SetUsername(Login_Username);
             reserveResources.Show();
         }
+
+        private void GenerateReportBtn_Click(object sender, EventArgs e)
+        {
+            ReportGenerate reportGenerate = new ReportGenerate();
+            reportGenerate.SetUsername(Login_Username);
+            reportGenerate.Show();
+        }
     }
 }
