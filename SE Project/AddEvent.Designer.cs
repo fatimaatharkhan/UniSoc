@@ -83,9 +83,9 @@
             label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(243, 38);
             label3.Name = "label3";
-            label3.Size = new Size(326, 57);
+            label3.Size = new Size(265, 57);
             label3.TabIndex = 21;
-            label3.Text = "Assign Tasks";
+            label3.Text = "Add Event";
             // 
             // label1
             // 
