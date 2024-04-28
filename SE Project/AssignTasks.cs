@@ -18,6 +18,8 @@ namespace SE_Project
         private string userName;
         private int event_id;
 
+        public string StudentUsername;
+
         public AssignTasks()
         {
             InitializeComponent();
@@ -38,6 +40,11 @@ namespace SE_Project
             this.userName = userName;
         }
 
+        public void setStudentUsername(string studentUsername)
+        {
+            this.StudentUsername = studentUsername;
+        }
+
         private void AssignTasks_Load(object sender, EventArgs e)
         {
 
@@ -45,7 +52,8 @@ namespace SE_Project
 
         private void LoadStudentList()
         {
-            var query = "Select first_name + ' ' + last_name as StudentName, u.userName as StudentId from Users u inner join Membership m on m.username = u.username where u.role = 'student' and m.society_id = '" + this.societyId + "' and m.status = 1";
+            var query = "SELECT CONCAT(u.first_name, ' ', u.last_name) AS StudentName, u.userName AS StudentId FROM Users u INNER JOIN Membership m ON u.username = m.username AND m.status = 1 WHERE u.role = 'student' AND m.society_id = " + this.societyId + " AND u.username = '" + this.StudentUsername + "'";
+
             cmbStudents.DataSource = DbUtils.GetDataTable(query);
         }
 

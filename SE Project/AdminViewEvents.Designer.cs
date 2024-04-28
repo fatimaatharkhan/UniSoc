@@ -41,7 +41,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(798, 221);
+            dataGridView1.Size = new Size(887, 221);
             dataGridView1.TabIndex = 19;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -49,7 +49,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(326, 32);
+            label3.Location = new Point(362, 33);
             label3.Name = "label3";
             label3.Size = new Size(183, 57);
             label3.TabIndex = 18;
@@ -60,11 +60,12 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(888, 450);
             Controls.Add(dataGridView1);
             Controls.Add(label3);
             Name = "AdminViewEvents";
             Text = "AdminViewEvents";
+            Activated += AdminViewEvents_Activated;
             Shown += AdminViewEvents_Shown;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

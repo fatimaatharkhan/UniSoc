@@ -42,7 +42,7 @@
             UsernameTxtbox.Name = "UsernameTxtbox";
             UsernameTxtbox.Size = new Size(175, 27);
             UsernameTxtbox.TabIndex = 0;
-            UsernameTxtbox.Text = "douglas70";
+            UsernameTxtbox.Text = "tester";
             // 
             // PasswordTxtbox
             // 
@@ -52,7 +52,7 @@
             PasswordTxtbox.PasswordChar = '*';
             PasswordTxtbox.Size = new Size(175, 27);
             PasswordTxtbox.TabIndex = 1;
-            PasswordTxtbox.Text = "456";
+            PasswordTxtbox.Text = "123";
             // 
             // label1
             // 
