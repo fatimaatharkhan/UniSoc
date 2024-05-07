@@ -94,6 +94,7 @@ namespace SE_Project
                 var currRow = senderGrid.Rows[e.RowIndex];
                 MessageBox.Show(currRow.Cells["society_id"].Value.ToString());
                 AssignTasks assignTasks = new AssignTasks();
+                assignTasks.setStudentUsername(Convert.ToString(currRow.Cells["StudentId"].Value));
                 assignTasks.SetSocietyId(Convert.ToInt32(currRow.Cells["society_id"].Value));
                 assignTasks.SetUserName(userName);
                 assignTasks.setEventId(event_id);

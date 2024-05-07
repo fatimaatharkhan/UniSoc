@@ -75,7 +75,7 @@ namespace SE_Project
                 var cm1 = new SqlCommand(query);
                 cm1.Parameters.AddWithValue("@update", this.selectedTask);
                 DbUtils.Insert(cm1);
-                MessageBox.Show("Task Assigned!");
+                MessageBox.Show("Marked Done!");
                 LoadTasksData();
             }
         }

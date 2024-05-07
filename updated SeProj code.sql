@@ -101,6 +101,19 @@ GO
 
 
 
+-- Create the Reserved_Resources table
+CREATE TABLE Reserved_Resources (
+    resource_id INT IDENTITY(1,1) PRIMARY KEY,
+    start_time TIME,
+    stop_time TIME,
+    resource_date DATE,
+    resource_type VARCHAR(100),
+    head_username VARCHAR(50),
+    society_id INT,
+    FOREIGN KEY (head_username) REFERENCES Users(username) ON DELETE CASCADE,
+    FOREIGN KEY (society_id) REFERENCES Society(society_id) ON DELETE CASCADE
+);
+GO
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 --							***************************************************TRIGGERS***************************************************						
 USE UniSoc;
@@ -162,7 +175,7 @@ BEGIN
 END;
 GO
 
-drop trigger ChangeHeadRole
+--drop trigger ChangeHeadRole
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -264,4 +277,7 @@ VALUES
 (3, 3, 'sarahwilliams', 'wodonnell', 'Your scientist administration modern language.', 0), -- Society: Howard LLC, Event: Tech Expo
 (5, 5, 'douglas70', 'tyler83', 'Argue model reason exactly operation region blue.', 0); -- Society: Young Inc, Event: Sports Week
 
+select * from Task
 
+
+SELECT CONCAT(u.first_name, ' ', u.last_name) AS StudentName, u.userName AS StudentId FROM Users u INNER JOIN Membership m ON u.username = m.username AND m.status = 1 WHERE u.role = 'student' AND m.society_id = 1 AND u.username = 'bowenmeredith'
