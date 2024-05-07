@@ -34,36 +34,41 @@ namespace SE_Project
                 {
                     conn.Open();
                     string query = @"
-                                    SELECT 
-                        s.society_name,
-                        e.event_name,
-                        e.event_description,
-                        h.username AS head_username,
-                        t.student_username,
-                        t.task_description,
-                        t.task_status,
-                        r.resource_type,
-                        r.start_time,
-                        r.stop_time
-                    FROM 
-                        Head h
-                    JOIN 
-                        Society s ON h.society_id = s.society_id
-                    JOIN 
-                        Event e ON s.society_id = e.society_id
-                    LEFT JOIN 
-                        Task t ON e.event_id = t.event_id AND h.username = t.head_username
-                    LEFT JOIN 
-                        Reserved_Resources r ON s.society_id = r.society_id
-                    WHERE 
-                        h.username = @Login_Username;
-            ";
+                            SELECT 
+                s.society_name,
+                e.event_name,
+                e.event_description,
+                h.username AS head_username,
+                t.student_username,
+                t.task_description,
+                t.task_status,
+                r.resource_type,
+                r.start_time,
+                r.stop_time
+            FROM 
+                Head h
+            JOIN 
+                Society s ON h.society_id = s.society_id
+            JOIN 
+                Event e ON s.society_id = e.society_id
+            LEFT JOIN 
+                Task t ON e.event_id = t.event_id AND h.username = t.head_username
+            LEFT JOIN 
+                Reserved_Resources r ON s.society_id = r.society_id
+            WHERE 
+                h.username = @Login_Username;
+    ";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@Login_Username", this.Login_Username); // Ensure you have a way to get this value
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     dataAdapter.Fill(dt);
+
+                    // Set DataGridView DataSource
                     dataGridView1.DataSource = dt;
+
+                    // Make the status column read-only
+                    dataGridView1.Columns["task_status"].ReadOnly = true;
                 }
                 catch (Exception ex)
                 {
@@ -75,6 +80,7 @@ namespace SE_Project
                 }
             }
         }
+
 
         private void ReportGenerate_Load(object sender, EventArgs e)
         {

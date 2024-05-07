@@ -12,7 +12,7 @@ namespace SE_Project
 {
     public static class DbUtils
     {
-        private static string connectionString = "Data Source=DESKTOP-DG0T52K\\SQLEXPRESS;Initial Catalog=UniSoc;Encrypt=false;Integrated Security=True";
+        private static string connectionString = "Data Source=G4CE-1080\\SQLEXPRESS;Initial Catalog=UniSoc;Integrated Security=True;Encrypt=False";
 
         public static DataTable GetDataTable(string query)
         {

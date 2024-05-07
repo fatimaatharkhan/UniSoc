@@ -22,7 +22,6 @@ CREATE TABLE Users (
     last_name VARCHAR(50),
     password VARCHAR(50),
     role VARCHAR(20),
-    roll_no INT NULL
 );
 GO
 
@@ -180,27 +179,27 @@ GO
 
 
 -- Inserting data into Users
-INSERT INTO Users (username, first_name, last_name, password, role, roll_no) VALUES
-('tester', 'John', 'Doe', '123', 'admin', NULL),
-('douglas70', 'Douglas', 'Fir', '456', 'student', 52604),
-('linda35', 'Linda', 'Tree', '789', 'admin', NULL),
-('ashleypeterson', 'Ashley', 'Peterson', 'ashley', 'admin', 42642),
-('tyler83', 'Tyler', 'Swift', 'tyler', 'student', NULL),
-('bowenmeredith', 'Bowen', 'Meredith', 'bowen', 'student', 57239),
-('amycantrell', 'Amy', 'Cantrell', 'amy', 'admin', NULL),
-('christopher90', 'Christopher', 'Nolan', 'chris', 'student', 86735),
-('david58', 'David', 'Blaine', 'david', 'admin', NULL),
-('seanlynch', 'Sean', 'Lynch', 'sean', 'student', 80575),
-('stephanie03', 'Stephanie', 'Meyer', 'stephanie', 'student', NULL),
-('sandra26', 'Sandra', 'Bullock', 'sandra', 'admin', 31223),
-('sarahwilliams', 'Sarah', 'Williams', 'sarah', 'student', NULL),
-('crystalsanders', 'Crystal', 'Sanders', 'crystal', 'admin', 37626),
-('lchase', 'Chase', 'Logan', 'chase', 'admin', NULL),
-('robertsmith', 'Robert', 'Smith', 'robert', 'admin', 50396),
-('wrightbrianna', 'Brianna', 'Wright', 'wright', 'student', NULL),
-('raymondhayden', 'Raymond', 'Hayden', 'raymond', 'student', 31338),
-('cgonzalez', 'Carlos', 'Gonzalez', 'gonzalez', 'student', NULL),
-('wodonnell', 'Will', 'O''Donnell', 'donell', 'student', 21584);
+INSERT INTO Users (username, first_name, last_name, password, role) VALUES
+('tester', 'John', 'Doe', 'T3stP@ssw0rd', 'admin'),
+('douglas70', 'Douglas', 'Fir', 'D0ugl@$70', 'student'),
+('linda35', 'Linda', 'Tree', 'L1nd@#35', 'admin'),
+('ashleypeterson', 'Ashley', 'Peterson', 'A$h13ypet3rson', 'admin'),
+('tyler83', 'Tyler', 'Swift', 'Ty13r!Sw1ft', 'student'),
+('bowenmeredith', 'Bowen', 'Meredith', 'B0w3nM3r3dith', 'student'),
+('amycantrell', 'Amy', 'Cantrell', '4mYc@ntr3ll', 'admin'),
+('christopher90', 'Christopher', 'Nolan', 'Chr15t0ph3r90!', 'student'),
+('david58', 'David', 'Blaine', 'Dav1dBl@1n3', 'admin'),
+('seanlynch', 'Sean', 'Lynch', 'S34n!Lynch', 'student'),
+('stephanie03', 'Stephanie', 'Meyer', 'St3ph@ni3M3y3r', 'student'),
+('sandra26', 'Sandra', 'Bullock', 'S@ndr@26', 'admin'),
+('sarahwilliams', 'Sarah', 'Williams', 'S@r@hW1ll14m$', 'student'),
+('crystalsanders', 'Crystal', 'Sanders', 'Cryst@l$@nd3r$', 'admin'),
+('lchase', 'Chase', 'Logan', 'Lch@$3', 'admin'),
+('robertsmith', 'Robert', 'Smith', 'R0b3rt$mith', 'admin'),
+('wrightbrianna', 'Brianna', 'Wright', 'WrightBr14nn@', 'student'),
+('raymondhayden', 'Raymond', 'Hayden', 'R@ym0ndH@yd3n', 'student'),
+('cgonzalez', 'Carlos', 'Gonzalez', 'C@rl0$G0nz@l3z', 'student'),
+('wodonnell', 'Will', 'O''Donnell', 'W!ll0d0nn3ll', 'student');
 GO
 
 -- Inserting data into Society
@@ -277,7 +276,4 @@ VALUES
 (3, 3, 'sarahwilliams', 'wodonnell', 'Your scientist administration modern language.', 0), -- Society: Howard LLC, Event: Tech Expo
 (5, 5, 'douglas70', 'tyler83', 'Argue model reason exactly operation region blue.', 0); -- Society: Young Inc, Event: Sports Week
 
-select * from Task
-
-
-SELECT CONCAT(u.first_name, ' ', u.last_name) AS StudentName, u.userName AS StudentId FROM Users u INNER JOIN Membership m ON u.username = m.username AND m.status = 1 WHERE u.role = 'student' AND m.society_id = 1 AND u.username = 'bowenmeredith'
+select * from Reserved_Resources

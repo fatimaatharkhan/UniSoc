@@ -35,5 +35,26 @@ namespace SE_Project
             viewTasks.SetUserName(this.Login_Username);
             viewTasks.Show();
         }
+
+        private void viewSocietyBtn_Click(object sender, EventArgs e)
+        {
+            ViewSocieties view = new ViewSocieties();
+            view.RecieveUsername(Login_Username);
+            view.Show();
+        }
+
+        private void MySocietiesBtn_Click(object sender, EventArgs e)
+        {
+            ViewMySociety view = new ViewMySociety();
+            view.RecieveUsername(Login_Username);
+            view.Show();
+        }
+
+        private void MyEventsBtn_Click(object sender, EventArgs e)
+        {
+            ViewMyEvents view = new ViewMyEvents();
+            view.RecieveUsername(Login_Username);
+            view.Show();
+        }
     }
 }

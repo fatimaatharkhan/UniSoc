@@ -34,11 +34,6 @@ namespace SE_Project
 
         }
 
-        private void viewMySocietiesBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void LoadSocietiesData()
         {
             //dataGridView1 = new DataGridView();
@@ -100,6 +95,13 @@ namespace SE_Project
             ReportGenerate reportGenerate = new ReportGenerate();
             reportGenerate.SetUsername(Login_Username);
             reportGenerate.Show();
+        }
+
+        private void viewSocietiesBtn_Click_1(object sender, EventArgs e)
+        {
+            ViewSocieties view = new ViewSocieties();
+            view.RecieveUsername(Login_Username);
+            view.Show();
         }
     }
 }
